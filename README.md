@@ -72,9 +72,14 @@ masking) dans les deux cas de figure. Une discussion critique des résultats est
 Le rendu de projet inclura : (1) un mini rapport (3-4 pages) décrivant les principales étapes de pré-traitement des données, de construction
 et de validation du modèle ; (2) le code source R utilisé ; (3) le fichier log de votre dépôt Git.
 
-_____________________________________________________________________________________________________________________________________________
+____________________________________________________________________________________________________________________________________________
+  Rapport 
 1/ Choix des données ;
 2/ Echantillonnage ;
 3/ Mise en forme matrice utilisateurs-items ;
+Champs à garder : reviewername / reviewtext / summary
+Appliquer l’ananlyse sentimentale sur reviewtext et summary puis comparer
+Puis faire le système de recommandation
 4/ Analyse de sentiment + score ;
 5/ Système de recommandation.
+
