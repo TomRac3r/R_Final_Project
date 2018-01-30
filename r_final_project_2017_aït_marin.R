@@ -93,3 +93,18 @@ bing_graphique_summary <- ggplot(sommaire_scores_revues_summary, aes(x = as.char
        y = 'Bing summary score')
 
 grid.arrange(afinn_graphique_summary, bing_graphique_summary, nrow = 2)
+
+
+## Recommandation System
+
+datasample_rrmatrix <- as(datasample,"realRatingMatrix")
+
+Rec.model <- Recommender(datasample_rrmatrix[1:250], method = "UBCF")
+
+eval <- evaluationScheme(datasample_rrmatrix[1:75], method="split", train=0.9, given=15)
+
+rec_ubcf <- Recommender(getData(eval, "train"), "UBCF")
+
+predict_ubcf <- predict(Rec_ubcf, getData(eval, "known"), type="ratings")
+
+error_ubcf <- calcPredictionAccuracy(predict_ubcf, getData(eval, "unknown"))
