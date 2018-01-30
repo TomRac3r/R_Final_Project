@@ -1,4 +1,9 @@
 # R_Final_Project
+
+=>pour plus de détails, voir le fichier du rapport !
+_____________________________________________________________________________________________________________________________________________
+SUBJECT & INFO :
+
 Final project for R-lectures, objectiv is to create a recommander system
 
 
@@ -73,39 +78,4 @@ Le rendu de projet inclura : (1) un mini rapport (3-4 pages) décrivant les prin
 et de validation du modèle ; (2) le code source R utilisé ; (3) le fichier log de votre dépôt Git.
 
 ____________________________________________________________________________________________________________________________________________
-(PROJET EN COURS!!!)
-Projet final R
-« Mini-système de recommandation »
-
-
-I/ Rapport 
-Construction du projet :
-Import des data en JSON, puis réduction aux champs voulus et échantillonnage.
-Ensuite, on applique le format « tidytext » aux champs reviewText et summary pour obtenir un tableau ne contenant que les mots qui sont importants pour l’analyse.
-L’analyse sentimentale vient ensuite, on fera cette analyse via deux lexicons (Bing et NRC) en vue d’obtenir un scoring.
-Une fois le scoring obtenu, on construira le système de recommandation en UCBF.
-
-1/ Choix des données 
-Le choix du jeu de données de base provient du site http://jmcauley.ucsd.edu/data/amazon/links.html. 
-Les datasets contiennent des avis (reviews) de produits provenant du site Amazon. Nous utiliserons un dataset réduit fait pour les expérimentations, ici le choix se portera sur le fichier contenant 231.780 reviews de jeux-vidéo.
-Le dataset importer est au format JSON et se présente de la forme :
-    reviewerID       asin reviewerName helpful
-134037 AXM4SLU87FCT7 B002GPPPS4  Vicki Cantu    0, 0
-                                                                                                                              reviewText
-134037 This was a cool gMe very different then the ones I used to play but still very enjoyable for the price I'll give it two thumbs up
-       overall   summary unixReviewTime reviewTime
-134037       4 Cool game     1386460800 12 8, 2013
-Ce dataset brut contient plusieurs champs, reviewerID, asin, reviewerName, helpful, reviewText, overall, summary, unixReviewTime et reviewTime.
-La seconde étape consistera à échantillonner le dataset, pour ne garder qu’un certain nombre de reviews et ainsi éviter le traitement des 231.780 reviews.
-
-2/ Echantillonnage 
-Comme vu précédemment, le dataset importer contient 231.780 reviews. Pour limiter le temps de travail des machines et permettre de refaire l’expérimentation rapidement, nous allons échantillonner ce set avec une valeur arbitraire de 50 reviews.
-
-3/ Mise en forme + « tidytext »
-La troisième tape de notre travail consistera à mettre en forme le dataset pour qu’il soit plus exploitable et ne garde que les champs utiles à l’analyse sentimentale. Ici, nous avons décidé de garder les champs « reviewerName », « reviewText » et « summary ». Nous choisissons de garder le champ « summary » pour essayer de faire une analyse sentimentale dessus et ensuite la comparer avec l’analyse sentimentale faite sur le champ « reviewText » (la comparaison de ces deux champs est questionnable, en effet, plus un texte est long, plus l’analyse sentimentale sera performante. Toutefois, pour notre projet, nous voulons expérimenter cette option).
-La dernière étape de pré-traitement des données sera la mise en forme finale faite via le package « tidytext ». 
-
-4/ Analyse de sentiment + score 
-5/ Système de recommandation
-
 
