@@ -1,6 +1,6 @@
 # R_Final_Project
 
-=>pour plus de détails, voir le fichier du rapport !
+=>pour plus de détails, voir le fichier .pdf du rapport !
 _____________________________________________________________________________________________________________________________________________
 SUBJECT & INFO :
 
